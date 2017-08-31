@@ -7,12 +7,16 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
+    private AndroidCameraApi androidCameraApi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         //hideAppIcon();    //Disabled for now
+
+        androidCameraApi = new AndroidCameraApi(this);
     }
 
 
