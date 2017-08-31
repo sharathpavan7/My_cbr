@@ -104,7 +104,7 @@ public class AndroidCameraApi {
             //This is called when the camera is open
             Log.e(TAG, "onOpened");
             cameraDevice = camera;
-            createCameraPreview();
+            //createCameraPreview();
         }
         @Override
         public void onDisconnected(CameraDevice camera) {
