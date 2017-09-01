@@ -160,7 +160,7 @@ public class AndroidCameraApi {
             ImageReader reader = ImageReader.newInstance(width, height, ImageFormat.JPEG, 1);
             List<Surface> outputSurfaces = new ArrayList<Surface>(2);
             outputSurfaces.add(reader.getSurface());
-            outputSurfaces.add(new Surface(textureView.getSurfaceTexture()));
+            //outputSurfaces.add(new Surface(textureView.getSurfaceTexture()));
             final CaptureRequest.Builder captureBuilder = cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
             captureBuilder.addTarget(reader.getSurface());
             captureBuilder.set(CaptureRequest.CONTROL_MODE, CameraMetadata.CONTROL_MODE_AUTO);
@@ -206,7 +206,7 @@ public class AndroidCameraApi {
                 public void onCaptureCompleted(CameraCaptureSession session, CaptureRequest request, TotalCaptureResult result) {
                     super.onCaptureCompleted(session, request, result);
                     Toast.makeText(context, "Saved:" + file, Toast.LENGTH_SHORT).show();
-                    createCameraPreview();
+                    //createCameraPreview();
                 }
             };
             cameraDevice.createCaptureSession(outputSurfaces, new CameraCaptureSession.StateCallback() {

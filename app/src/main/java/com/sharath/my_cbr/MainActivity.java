@@ -43,5 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void takePic(View view){
         Log.i(TAG,"takepic button is clicked");
+
+        androidCameraApi.takePicture();
     }
 }
