@@ -4,8 +4,12 @@ import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+
+    private final String TAG = "MainActivity";
 
     private AndroidCameraApi androidCameraApi;
 
@@ -35,5 +39,9 @@ public class MainActivity extends AppCompatActivity {
         packageManager.setComponentEnabledSetting(cmpName,PackageManager.COMPONENT_ENABLED_STATE_ENABLED,PackageManager.DONT_KILL_APP);
 
 
+    }
+
+    public void takePic(View view){
+        Log.i(TAG,"takepic button is clicked");
     }
 }
