@@ -46,4 +46,14 @@ public class MainActivity extends AppCompatActivity {
 
         androidCameraApi.takePicture();
     }
+
+    public void startRecord(View view){
+        Log.i(TAG,"Start Record button is clicked");
+
+    }
+
+    public void stopRecord(View view){
+        Log.i(TAG,"Stop Record button is clicked");
+
+    }
 }
